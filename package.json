@@ -1,0 +1,38 @@
+{
+  "name": "experium-deadline-calculator",
+  "version": "1.0.0",
+  "description": "Working days JS cal for russian  weekend calendar",
+  "main": "index.js",
+  "author": "<dev.trauret@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "convert": "babel-node ./src/convert.js",
+    "test": "jest ./tests",
+    "build": "webpack --mode production && NODE_ENV=production babel src --out-dir lib",
+    "start": "npm test -- --watch"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "collectCoverage": true,
+    "coverageDirectory": "reports",
+    "coverageReporters": [
+      "cobertura"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.4",
+    "babel-jest": "^24.1.0",
+    "babel-loader": "^8.0.5",
+    "clean-webpack-plugin": "^1.0.1",
+    "csv-parse": "^4.3.3",
+    "jest": "^24.1.0",
+    "string.prototype.padstart": "^3.0.0",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3"
+  }
+}
