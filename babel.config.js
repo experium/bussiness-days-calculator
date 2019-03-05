@@ -3,10 +3,7 @@ module.exports = {
         [
             '@babel/preset-env',
             {
-                targets: process.env.NODE_ENV === 'production' ? {
-                    "ie": "11",
-                    chrome: "67",
-                } : {
+                targets: {
                     node: 'current',
                 },
                 useBuiltIns: "usage",

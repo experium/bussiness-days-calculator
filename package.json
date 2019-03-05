@@ -2,13 +2,13 @@
   "name": "bussiness-days-calculator",
   "version": "1.0.0",
   "description": "Working days JS calculator for russian  weekend calendar",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "author": "<dev.trauret@gmail.com>",
   "license": "MIT",
   "scripts": {
     "convert": "babel-node ./src/convert.js",
     "test": "jest ./tests",
-    "build": "webpack --mode production && NODE_ENV=production babel src --out-dir lib",
+    "build": "NODE_ENV=production babel src --out-dir lib",
     "start": "npm test -- --watch"
   },
   "jest": {
