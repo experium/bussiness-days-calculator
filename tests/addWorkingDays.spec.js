@@ -23,3 +23,25 @@ test('should add without weekend', () => {
 
     expect(result).toEqual(new Date('2019-05-23'));
 });
+
+test('should add long period', () => {
+    const result = addWorkingDays(new Date('2019-04-30'), 4);
+
+    expect(result).toEqual(new Date('2019-05-13'));
+});
+
+test('should add reverse weekend', () => {
+    const result = addWorkingDays(new Date('2019-05-06'), -1);
+
+    expect(result).toEqual(new Date('2019-04-30'));
+});
+
+test('should trow error', (done) => {
+    try {
+        const result = addWorkingDays('', 1);
+    } catch (e) {
+        return done();
+    }
+
+    done('No error');
+});

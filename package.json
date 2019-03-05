@@ -1,8 +1,8 @@
 {
-  "name": "experium-deadline-calculator",
+  "name": "bussiness-days-calculator",
   "version": "1.0.0",
-  "description": "Working days JS cal for russian  weekend calendar",
-  "main": "index.js",
+  "description": "Working days JS calculator for russian  weekend calendar",
+  "main": "dist/index.js",
   "author": "<dev.trauret@gmail.com>",
   "license": "MIT",
   "scripts": {
