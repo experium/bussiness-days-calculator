@@ -1,9 +1,7 @@
-import { checkDateWeekend } from './utils/date';
+import { checkDateWeekend, isDate } from './utils/date';
 
 export const addWorkingDays = (date, days = 0) => {
-    if (!(date instanceof Date) || isNaN(date.getTime())) {
-        throw new Error('Invalid date');
-    }
+    isDate(date);
 
     const positiveDirection = days > 0;
     let resultDate = new Date(date);
@@ -22,3 +20,5 @@ export const addWorkingDays = (date, days = 0) => {
 
     return resultDate;
 };
+
+export const checkDate = checkDateWeekend;
