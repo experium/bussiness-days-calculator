@@ -1,24 +1,28 @@
-import { checkDateWeekend, isDate } from './utils/date';
+import { isDate } from './utils/date';
+import { checkDate as checkDateHandler } from './date/checkDate';
+import { addWorkingDays as addWorkingDaysHandler } from './date/addWorkingDays';
+import { countPeriodWeekends as countPeriodWeekendsHandler } from './date/countPeriodWeekends';
 
-export const addWorkingDays = (date, days = 0) => {
-    isDate(date);
-
-    const positiveDirection = days > 0;
-    let resultDate = new Date(date);
-
-    while(days || checkDateWeekend(resultDate)) {
-        if (!checkDateWeekend(resultDate)) {
-            if (positiveDirection) {
-                --days;
-            } else {
-                ++days;
-            }
-        }
-
-        resultDate.setDate(resultDate.getDate() + (positiveDirection ? 1 : -1));
+export const checkDate = function(date) {
+    if (!isDate(date)) {
+        return new Date('Invalide date');
     }
 
-    return resultDate;
+    return checkDateHandler(date);
 };
 
-export const checkDate = checkDateWeekend;
+export const addWorkingDays = function(date, count) {
+    if (!isDate(date)) {
+        return new Date('Invalide date');
+    }
+
+    return addWorkingDaysHandler(date, count);
+};
+
+export const countPeriodWeekends = function(startDate, endDate) {
+    if (!isDate(startDate) || !isDate(endDate)) {
+        return (new Date('Invalide date')).getTime();
+    }
+
+    return countPeriodWeekendsHandler(startDate, endDate);
+};

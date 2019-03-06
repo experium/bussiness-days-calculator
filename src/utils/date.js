@@ -1,23 +1,9 @@
 import PadStart from 'string.prototype.padstart';
 
-import { days } from '../data/days';
-
 PadStart.shim();
 
 export const isDate = date => {
-    if (!(date instanceof Date) || isNaN(date.getTime())) {
-        throw new Error('Invalid date');
-    }
+    return (date instanceof Date) && !isNaN(date.getTime());
 };
 
-const getNumber = value => `${value}`.padStart(2, '0');
-
-export const checkDateWeekend = date => {
-    isDate(date);
-
-    const dateString = (
-        `${date.getFullYear()}${getNumber(date.getMonth() + 1)}${getNumber(date.getDate())}`
-    );
-
-    return !!days.weekends[dateString];
-};
+export const getDateNumber = value => `${value}`.padStart(2, '0');

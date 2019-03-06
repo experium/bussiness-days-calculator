@@ -36,12 +36,8 @@ test('should add reverse weekend', () => {
     expect(result).toEqual(new Date('2019-04-30'));
 });
 
-test('should trow error', (done) => {
-    try {
-        const result = addWorkingDays('', 1);
-    } catch (e) {
-        return done();
-    }
+test('should throw error', () => {
+    const result = addWorkingDays('', 1);
 
-    done('No error');
+    expect(result.getTime()).toBeNaN();
 });

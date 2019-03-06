@@ -6,12 +6,8 @@ test('should detect weekend', () => {
     expect(result).toEqual(true);
 });
 
-test('should trow error', (done) => {
-    try {
-        const result = checkDate('');
-    } catch (e) {
-        return done();
-    }
+test('should throw error', () => {
+    const result = checkDate('');
 
-    done('No error');
+    expect(result.getTime()).toBeNaN();
 });

@@ -1,6 +1,6 @@
 {
   "name": "bussiness-days-calculator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Working days JS calculator for russian  weekend calendar",
   "main": "lib/index.js",
   "author": "<dev.trauret@gmail.com>",
@@ -31,8 +31,10 @@
     "clean-webpack-plugin": "^1.0.1",
     "csv-parse": "^4.3.3",
     "jest": "^24.1.0",
-    "string.prototype.padstart": "^3.0.0",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3"
+  },
+  "dependencies": {
+    "string.prototype.padstart": "^3.0.0"
   }
 }
