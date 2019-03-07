@@ -1,6 +1,7 @@
 # Business days calculator
 
 [![Build Status](https://travis-ci.com/experium/bussiness-days-calculator.svg?branch=master)](https://travis-ci.com/experium/bussiness-days-calculator)
+[![NPM version][npm-image]][npm-url]
 
 Based on russian weekends calendar from gov.ru
 
