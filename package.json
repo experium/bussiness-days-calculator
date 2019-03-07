@@ -5,6 +5,9 @@
   "main": "lib/index.js",
   "author": "<dev.trauret@gmail.com>",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "convert": "babel-node ./src/convert.js",
     "test": "jest ./tests",
