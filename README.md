@@ -1,6 +1,16 @@
-# Experium deadline calculator
+# Business days calculator
+
+[![Build Status](https://travis-ci.com/experium/bussiness-days-calculator.svg?branch=master)](https://travis-ci.com/experium/bussiness-days-calculator)
 
 Based on russian weekends calendar from gov.ru
+
+## Install
+
+Install `@experium/business-days-calculator` using `npm` or `yarn`.
+
+```
+yarn add @experium/business-days-calculator
+```
 
 ## Usage
 
@@ -22,11 +32,11 @@ const isWeekend = checkDate(new Date('2019-05-09'));
 // true
 ```
 
-### `coutPeriodWeekends(Date, Date) : Number` Function
+### `countPeriodWeekends(Date, Date) : Number` Function
 ```javascript
 
-import { coutPeriodWeekends } from 'experium-deadline-calculator';
+import { countPeriodWeekends } from 'experium-deadline-calculator';
 
-const weekendsCount = coutPeriodWeekends(new Date('2019-05-01'), new Date('2019-05-09'));
+const weekendsCount = countPeriodWeekends(new Date('2019-05-01'), new Date('2019-05-09'));
 // 6
 ```

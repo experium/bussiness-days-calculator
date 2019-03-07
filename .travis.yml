@@ -14,5 +14,5 @@ jobs:
       deploy:
         skip_cleanup: true
         provider: npm
-        email: "dev.trauret@gmail.com"
+        email: "webdev@experium.ru"
         api_key: "$NPM_API_KEY"
