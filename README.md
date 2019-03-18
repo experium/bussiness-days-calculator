@@ -15,12 +15,12 @@ yarn add @experium/business-days-calculator
 
 ## Usage
 
-### `addWorkingsDays(Date, Number) : Date` Function
+### `addWorkingDays(Date, Number) : Date` Function
 ```javascript
 
-import { addWorkingsDays } from '@experium/business-days-calculator';
+import { addWorkingDays } from '@experium/business-days-calculator';
 
-const nextDeadlineWorkingDate = addWorkingsDays(new Date('2019-04-30'), 2);
+const nextDeadlineWorkingDate = addWorkingDays(new Date('2019-04-30'), 2);
 // Date('2019-05-07')
 ```
 
