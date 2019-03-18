@@ -1,8 +1,9 @@
 {
   "name": "@experium/business-days-calculator",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Working days JS calculator for russian  weekend calendar",
   "main": "lib/index.js",
+  "module": "./lib/index.js",
   "author": "<dev.trauret@gmail.com>",
   "repository": "https://github.com/experium/bussiness-days-calculator",
   "license": "MIT",
