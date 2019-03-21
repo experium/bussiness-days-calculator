@@ -1,10 +1,9 @@
 import fs from 'fs';
-import PadStart from 'string.prototype.padstart';
 import Parser from 'csv-parse/lib/sync';
 
-PadStart.shim();
+import { leadZero } from './date';
 
-const getNumber = value => `${value}`.padStart(2, '0');
+const getNumber = value => leadZero(`${value}`);
 const setWeekendDays = (weekends, shorts, year, month, daysString) => {
     const getDate = value => (
         `${year}${getNumber(month)}${getNumber(value)}`
