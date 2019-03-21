@@ -1,5 +1,5 @@
 export const leadZero = value => (
-    value && value.length === 1 ? `$0{value}`: value
+    value && value.length === 1 ? `0${value}`: value
 );
 
 export const isDate = date => {
