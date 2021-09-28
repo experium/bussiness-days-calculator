@@ -25,7 +25,6 @@ node {
 
             if (!isPR) {
                 stage('Publish artifacts') {
-                    step([$class: 'ArtifactArchiver', artifacts: 'dist/**/*', fingerprint: true])
                     step([$class: 'ArtifactArchiver', artifacts: 'lib/**/*', fingerprint: true])
                 }
 
