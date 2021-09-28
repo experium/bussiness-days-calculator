@@ -33,10 +33,6 @@ node {
                         sh "npm publish"
                     }
                 }
-
-                // stage('Publish ghpage') {
-                //     sh "yarn deploy-storybook"
-                // }
             }
         }
     }
